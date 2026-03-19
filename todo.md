@@ -65,3 +65,15 @@
 - [x] Reduce hero video transparency for better visibility
 - [x] Push updated code to GitHub
 - [x] Redeploy to Firebase Hosting
+
+## New Work - Photo Scraping & Hero Section Enhancement
+- [x] Scrape additional photos from Boulevard Hall photos page
+- [x] Extract agreement forms from original website
+- [x] Add agreement forms to Pricing section
+- [x] Update The Venue hero with unique background image
+- [x] Update Gallery hero with unique background image
+- [x] Update Schedule hero with unique background image
+- [x] Update Pricing hero with unique background image (pending)
+- [x] Update Contact hero with unique background image
+- [x] Update Guestbook hero with unique background image
+- [x] Apply transparency effect to all hero background images

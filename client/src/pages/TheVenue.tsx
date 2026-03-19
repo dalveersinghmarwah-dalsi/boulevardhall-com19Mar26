@@ -47,19 +47,20 @@ const amenities = [
 export default function TheVenue() {
   return (
     <div className="min-h-screen">
-      {/* Royal Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.15)" }}>
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
-        </div>
+      {/* Royal Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 overflow-hidden min-h-96" style={{
+        backgroundImage: `url('https://nebula.wsimg.com/7997923d9d16c08ec08f0357ad876f56?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 opacity-70" style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}></div>
         
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#d79696" }}>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-lg" style={{ color: "#d79696" }}>
               Our Elegant Venues
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-white leading-relaxed drop-shadow-lg">
               Discover three stunning locations across Rhode Island, each meticulously designed to provide the perfect backdrop for your unforgettable celebrations
             </p>
           </div>

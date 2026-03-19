@@ -218,6 +218,56 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Agreement Forms */}
+      <section className="section-padding">
+        <div className="container max-w-3xl">
+          <h2 className="text-3xl font-bold mb-8">Agreement & Documentation</h2>
+          <p className="text-muted-foreground mb-8">
+            Please review and agree to our rental agreement before booking your event. All guests must comply with venue policies.
+          </p>
+          <div className="space-y-6">
+            <div className="card-elegant p-6 border-l-4" style={{ borderLeftColor: "#d79696" }}>
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">📋</span>
+                Venue Rental Agreement
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Comprehensive rental agreement covering all terms, conditions, and policies for your event.
+              </p>
+              <a href="#" className="inline-block px-4 py-2 rounded-lg font-medium transition-all" style={{ backgroundColor: "#d79696", color: "white" }}>
+                View & Download PDF
+              </a>
+            </div>
+
+            <div className="card-elegant p-6 border-l-4" style={{ borderLeftColor: "#d79696" }}>
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">✓</span>
+                House Rules & Policies
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Important guidelines to ensure a smooth and enjoyable event for all guests.
+              </p>
+              <a href="#" className="inline-block px-4 py-2 rounded-lg font-medium transition-all" style={{ backgroundColor: "#d79696", color: "white" }}>
+                View & Download PDF
+              </a>
+            </div>
+
+            <div className="card-elegant p-6 border-l-4" style={{ borderLeftColor: "#d79696" }}>
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">⚖️</span>
+                Liability Waiver
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Standard liability waiver required for all event bookings at Boulevard Banquet Hall.
+              </p>
+              <a href="#" className="inline-block px-4 py-2 rounded-lg font-medium transition-all" style={{ backgroundColor: "#d79696", color: "white" }}>
+                View & Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Payment Info */}
       <section className="section-padding bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="container text-center">
