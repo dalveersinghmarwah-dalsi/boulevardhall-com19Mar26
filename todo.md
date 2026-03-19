@@ -60,3 +60,8 @@
 - [x] Make hero video background more transparent
 - [x] Push code to GitHub repository
 - [x] Deploy build to Firebase Hosting
+
+## Final Adjustments
+- [ ] Reduce hero video transparency for better visibility
+- [ ] Push updated code to GitHub
+- [ ] Redeploy to Firebase Hosting

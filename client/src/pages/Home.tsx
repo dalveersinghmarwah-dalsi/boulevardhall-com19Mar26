@@ -7,7 +7,7 @@ export default function Home() {
       {/* Full-Page Hero Section with YouTube Background */}
       <section className="relative w-full h-screen overflow-hidden">
         {/* YouTube Video Background */}
-        <div className="absolute inset-0 w-full h-full opacity-40">
+        <div className="absolute inset-0 w-full h-full opacity-70">
           <iframe
             width="100%"
             height="100%"
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Semi-transparent Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Hero Content - Centered Text Overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
