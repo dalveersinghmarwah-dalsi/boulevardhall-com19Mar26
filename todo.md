@@ -48,3 +48,10 @@
 - [x] Make YouTube video full-page hero background with transparency
 - [x] Add overlay text: "Boulevard Banquet Hall" (large) and "Celebrate Your Special Moments" (subtext)
 - [x] Update color scheme from #e58870 to #d79696 throughout site
+
+## Current Work - Page Layout & Royal Style Redesign
+- [x] Update Home page hero text color to match Boulevard title branding color
+- [x] Add hero sections to all tab pages (The Venue, Gallery, Schedule, Pricing, Contact, Guestbook)
+- [x] Implement royal-style UI design with elegant cards and sections
+- [x] Improve overall page layout and visual hierarchy
+- [x] Add consistent spacing and typography across all pages

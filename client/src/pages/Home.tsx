@@ -26,11 +26,11 @@ export default function Home() {
 
         {/* Hero Content - Centered Text Overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="container text-center text-white px-4">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight drop-shadow-lg">
+          <div className="container text-center px-4">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight drop-shadow-lg" style={{ color: "#d79696" }}>
               Boulevard Banquet Hall
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-lg">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-light drop-shadow-lg text-white">
               Celebrate Your Special Moments
             </p>
           </div>

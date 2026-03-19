@@ -78,13 +78,20 @@ export default function Guestbook() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-background to-accent/5">
-        <div className="container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Guest Reviews</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Read what our satisfied customers have to say about their events at Boulevard Banquet Hall
-          </p>
+      {/* Royal Hero Section */}
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.15)" }}>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6" style={{ color: "#d79696" }}>Guest Reviews</h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Read what our satisfied customers have to say about their events at Boulevard Banquet Hall
+            </p>
+          </div>
         </div>
       </section>
 

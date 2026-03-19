@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { MapPin, Users, Wifi, ParkingCircle, Table2, Phone } from "lucide-react";
+import { MapPin, Users, Wifi, ParkingCircle, Table2, Phone, Star } from "lucide-react";
 
 const locations = [
   {
@@ -8,21 +6,18 @@ const locations = [
     address: "510 Armistice Boulevard",
     city: "Pawtucket, RI 02861",
     phone: "(401) 527-0017",
-    image: "Armistice Location"
   },
   {
     name: "Central Avenue",
     address: "520 Central Avenue",
     city: "Pawtucket, RI 02861",
     phone: "(401) 527-0017",
-    image: "Central Avenue Location"
   },
   {
     name: "Main Street",
     address: "222 Main Street",
     city: "Pawtucket, RI 02860",
     phone: "(401) 527-0017",
-    image: "Main Street Location"
   }
 ];
 
@@ -52,78 +47,112 @@ const amenities = [
 export default function TheVenue() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-background to-accent/5">
-        <div className="container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Venues</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Three elegant locations across Rhode Island, each offering the same premium amenities and exceptional service
-          </p>
+      {/* Royal Hero Section */}
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.15)" }}>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#d79696" }}>
+              Our Elegant Venues
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Discover three stunning locations across Rhode Island, each meticulously designed to provide the perfect backdrop for your unforgettable celebrations
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Amenities */}
-      <section className="section-padding bg-muted/30">
+      {/* Premium Amenities - Royal Style */}
+      <section className="section-padding bg-background">
         <div className="container">
-          <h2 className="text-4xl font-bold text-center mb-12">Premium Amenities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4" style={{ color: "#d79696" }}>Premium Amenities</h2>
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: "#d79696" }}></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {amenities.map((amenity, idx) => (
-              <div key={idx} className="card-elegant p-6 text-center">
-                <amenity.icon size={40} className="mx-auto text-primary mb-4" />
-                <h3 className="font-bold mb-2">{amenity.title}</h3>
-                <p className="text-sm text-muted-foreground">{amenity.description}</p>
+              <div
+                key={idx}
+                className="p-8 rounded-xl border-2 transition-all duration-300 text-center bg-gradient-to-br from-background to-muted/20"
+                style={{ borderColor: "rgba(215, 150, 150, 0.3)" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "#d79696";
+                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(215, 150, 150, 0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "rgba(215, 150, 150, 0.3)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                <amenity.icon size={48} style={{ color: "#d79696" }} className="mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">{amenity.title}</h3>
+                <p className="text-muted-foreground">{amenity.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Locations */}
-      <section className="section-padding">
+      {/* Three Locations - Royal Cards */}
+      <section className="section-padding" style={{ backgroundColor: "rgba(215, 150, 150, 0.05)" }}>
         <div className="container">
-          <h2 className="text-4xl font-bold text-center mb-12">Three Convenient Locations</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4" style={{ color: "#d79696" }}>Three Convenient Locations</h2>
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: "#d79696" }}></div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {locations.map((location, idx) => (
               <div
                 key={idx}
-                className="card-elegant overflow-hidden animate-fadeInUp"
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                className="rounded-2xl overflow-hidden bg-background border-2 transition-all duration-300 hover:shadow-2xl"
+                style={{ borderColor: "rgba(215, 150, 150, 0.3)" }}
               >
-                {/* Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-b border-border">
-                  <div className="text-center">
-                    <MapPin size={48} className="mx-auto text-primary/50 mb-2" />
-                    <p className="text-muted-foreground text-sm">{location.image}</p>
+                {/* Location Image Placeholder */}
+                <div className="h-56 relative overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.1)" }}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <MapPin size={64} style={{ color: "#d79696" }} className="mx-auto mb-3 opacity-50" />
+                      <p className="text-muted-foreground font-semibold">{location.name}</p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Location Details */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{location.name}</h3>
-                  <div className="space-y-3 mb-6">
+                  <h3 className="text-2xl font-bold mb-6" style={{ color: "#d79696" }}>{location.name}</h3>
+                  
+                  <div className="space-y-4 mb-8">
                     <div className="flex items-start gap-3">
-                      <MapPin size={20} className="text-primary flex-shrink-0 mt-1" />
+                      <MapPin size={24} style={{ color: "#d79696" }} className="flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold">{location.address}</p>
+                        <p className="font-semibold text-foreground">{location.address}</p>
                         <p className="text-muted-foreground">{location.city}</p>
                       </div>
                     </div>
+                    
                     <div className="flex items-center gap-3">
-                      <Phone size={20} className="text-primary flex-shrink-0" />
-                      <a href={`tel:${location.phone.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
+                      <Phone size={24} style={{ color: "#d79696" }} className="flex-shrink-0" />
+                      <a href={`tel:${location.phone.replace(/\D/g, '')}`} className="hover:underline" style={{ color: "#d79696" }}>
                         {location.phone}
                       </a>
                     </div>
                   </div>
 
                   <div className="pt-6 border-t border-border">
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Star size={18} style={{ color: "#d79696" }} fill="#d79696" />
+                      <span className="text-sm font-semibold">Premium Venue</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-6">
                       <strong>Capacity:</strong> Up to 110 guests
                     </p>
-                    <p className="text-sm text-muted-foreground mb-6">
-                      <strong>Features:</strong> Free Wi-Fi, Free Parking, Tables & Chairs Included
-                    </p>
-                    <a href="/contact" className="btn-primary inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 text-center">
+                    <a href="/contact" className="w-full py-3 rounded-lg font-semibold transition-all duration-300 text-center text-white hover:shadow-lg" style={{ backgroundColor: "#d79696" }}>
                       Book This Location
                     </a>
                   </div>
@@ -137,9 +166,13 @@ export default function TheVenue() {
       {/* Venue Tour Videos */}
       <section className="section-padding bg-background">
         <div className="container">
-          <h2 className="text-4xl font-bold text-center mb-12">Virtual Venue Tours</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4" style={{ color: "#d79696" }}>Virtual Venue Tours</h2>
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: "#d79696" }}></div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg border-2 border-border hover:shadow-2xl transition-all duration-300" style={{ borderColor: "rgba(215, 150, 150, 0.3)" }}>
               <iframe
                 width="100%"
                 height="315"
@@ -150,7 +183,7 @@ export default function TheVenue() {
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg border-2 border-border hover:shadow-2xl transition-all duration-300" style={{ borderColor: "rgba(215, 150, 150, 0.3)" }}>
               <iframe
                 width="100%"
                 height="315"
@@ -165,73 +198,55 @@ export default function TheVenue() {
         </div>
       </section>
 
-      {/* Why BYOB */}
-      <section className="section-padding bg-gradient-to-r from-primary/10 to-accent/10">
+      {/* BYOB Policy - Royal Section */}
+      <section className="section-padding" style={{ backgroundColor: "rgba(215, 150, 150, 0.08)" }}>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Our Unique BYOB Policy</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-5xl font-bold mb-6" style={{ color: "#d79696" }}>Our Unique BYOB Policy</h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Boulevard Banquet Hall is the only venue in Rhode Island that allows you to bring your own food and drinks to your event. This unique policy helps you save thousands of dollars while maintaining complete control over your menu and beverage selection.
               </p>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-background flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white" style={{ backgroundColor: "#d79696" }}>
                     ✓
                   </div>
-                  <span>Bring your own food and catering</span>
+                  <span className="text-muted-foreground">Bring any food and beverages you choose</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-background flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white" style={{ backgroundColor: "#d79696" }}>
                     ✓
                   </div>
-                  <span>Alcohol beverages allowed</span>
+                  <span className="text-muted-foreground">Save thousands on catering costs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-background flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white" style={{ backgroundColor: "#d79696" }}>
                     ✓
                   </div>
-                  <span>Choose your own menu and drinks</span>
+                  <span className="text-muted-foreground">Complete control over your menu</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-background flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-white" style={{ backgroundColor: "#d79696" }}>
                     ✓
                   </div>
-                  <span>Significant cost savings</span>
+                  <span className="text-muted-foreground">Professional venue setup included</span>
                 </li>
               </ul>
-              <a href="/contact" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90">
-                Reserve Your Venue Today
-              </a>
             </div>
-            <div className="h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center border-2 border-primary/30 hidden md:flex">
-              <div className="text-center">
-                <Users size={64} className="mx-auto text-primary/50 mb-4" />
-                <p className="text-muted-foreground">BYOB Celebration</p>
+            
+            <div className="relative">
+              <div className="p-8 rounded-2xl border-2 text-center" style={{ backgroundColor: "rgba(215, 150, 150, 0.1)", borderColor: "#d79696" }}>
+                <div className="text-6xl mb-4">🎉</div>
+                <h3 className="text-3xl font-bold mb-3" style={{ color: "#d79696" }}>Save Big</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Enjoy premium venue amenities without premium catering costs
+                </p>
+                <a href="/contact" className="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg" style={{ backgroundColor: "#d79696" }}>
+                  Learn More
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area */}
-      <section className="section-padding">
-        <div className="container">
-          <h2 className="text-4xl font-bold text-center mb-12">Serving the Entire Region</h2>
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-            We proudly serve customers from all of Rhode Island and Massachusetts, including:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              "Pawtucket", "Providence", "East Providence", "Lincoln",
-              "Warwick", "Cranston", "Cumberland", "Johnston",
-              "Central Falls", "Attleboro", "North Attleboro", "Norton",
-              "Taunton", "Plainville"
-            ].map((city, idx) => (
-              <div key={idx} className="text-center p-4 bg-muted rounded-lg">
-                <p className="font-medium">{city}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
