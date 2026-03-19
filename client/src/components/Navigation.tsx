@@ -20,34 +20,28 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="text-2xl md:text-3xl font-bold text-primary">
-              Boulevard
-            </div>
-            <div className="hidden sm:block text-sm text-muted-foreground">
-              Banquet Hall
-            </div>
-          </a>
-        </Link>
+        <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div className="text-2xl md:text-3xl font-bold text-primary">
+            Boulevard
+          </div>
+          <div className="hidden sm:block text-sm text-muted-foreground">
+            Banquet Hall
+          </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
-                {link.label}
-              </a>
-            </Link>
+            <a key={link.href} href={link.href} className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+              {link.label}
+            </a>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <a href="tel:401-527-0017">
-            <Button className="btn-primary">
-              Call: (401) 527-0017
-            </Button>
+          <a href="tel:401-527-0017" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90">
+            Call: (401) 527-0017
           </a>
         </div>
 
@@ -65,20 +59,18 @@ export default function Navigation() {
         <div className="md:hidden border-t border-border bg-background">
           <div className="container py-4 space-y-2">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </Link>
+              <a
+                key={link.href}
+                href={link.href}
+                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
             ))}
             <div className="pt-2 border-t border-border">
-              <a href="tel:401-527-0017" className="block">
-                <Button className="btn-primary w-full">
-                  Call: (401) 527-0017
-                </Button>
+              <a href="tel:401-527-0017" className="block btn-primary w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 text-center">
+                Call: (401) 527-0017
               </a>
             </div>
           </div>

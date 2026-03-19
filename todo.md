@@ -31,3 +31,6 @@
 - [ ] Performance optimization
 - [ ] SEO optimization
 - [ ] Final checkpoint and deployment
+
+## Bug Fixes
+- [x] Fix nested anchor tag error in Navigation component
