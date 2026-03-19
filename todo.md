@@ -43,3 +43,8 @@
 - [x] Integrate YouTube hero video (3NVesSCHqk4) on Home page
 - [x] Add internal page videos (4uh1QBIzp0A, 2NohrcbWbQk) to The Venue page
 - [x] Replace placeholder gallery images with extracted photos
+
+## Current Work - Hero Section Redesign
+- [x] Make YouTube video full-page hero background with transparency
+- [x] Add overlay text: "Boulevard Banquet Hall" (large) and "Celebrate Your Special Moments" (subtext)
+- [x] Update color scheme from #e58870 to #d79696 throughout site
