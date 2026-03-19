@@ -35,3 +35,11 @@
 ## Bug Fixes
 - [x] Fix nested anchor tag error in Navigation component
 - [x] Fix nested anchor tag errors in Home, TheVenue, and Pricing pages
+
+## Current Work - Branding & Media Updates
+- [x] Update color palette to softer, lighter tones
+- [x] Update button styling with lighter colors
+- [x] Extract images from original Boulevard Hall website
+- [x] Integrate YouTube hero video (3NVesSCHqk4) on Home page
+- [x] Add internal page videos (4uh1QBIzp0A, 2NohrcbWbQk) to The Venue page
+- [x] Replace placeholder gallery images with extracted photos

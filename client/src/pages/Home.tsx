@@ -50,15 +50,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Image Placeholder */}
+            {/* Right Video Embed */}
             <div className="animate-slideInRight hidden md:block">
-              <div className="relative h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden border-2 border-primary/30">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Calendar size={64} className="mx-auto text-primary/50 mb-4" />
-                    <p className="text-muted-foreground">Elegant Venue Showcase</p>
-                  </div>
-                </div>
+              <div className="relative h-96 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/3NVesSCHqk4?autoplay=1&mute=1&loop=1&playlist=3NVesSCHqk4"
+                  title="Boulevard Banquet Hall - Venue Tour"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>

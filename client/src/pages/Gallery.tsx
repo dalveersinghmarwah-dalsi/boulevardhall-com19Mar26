@@ -3,15 +3,11 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const galleryImages = [
-  { id: 1, title: "Elegant Setup", category: "Setup" },
-  { id: 2, title: "Decorated Hall", category: "Decoration" },
-  { id: 3, title: "Main Entrance", category: "Venue" },
-  { id: 4, title: "Pink Themed Event", category: "Event" },
-  { id: 5, title: "Table Arrangement", category: "Setup" },
-  { id: 6, title: "Full Hall View", category: "Venue" },
-  { id: 7, title: "Lighting Setup", category: "Setup" },
-  { id: 8, title: "Celebration", category: "Event" },
-  { id: 9, title: "Dining Area", category: "Venue" },
+  { id: 1, title: "Elegant Venue Setup", category: "Venue", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/TcM4jjBH3gYQhAkue9gaQy/venue-1_c7171108.jpg" },
+  { id: 2, title: "Beautiful Decorated Hall", category: "Decoration", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/TcM4jjBH3gYQhAkue9gaQy/venue-2_fd05b865.jpg" },
+  { id: 3, title: "Intimate Event Space", category: "Venue", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/TcM4jjBH3gYQhAkue9gaQy/venue-3_14e95b61.jpg" },
+  { id: 4, title: "Elegant Table Arrangement", category: "Setup", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/TcM4jjBH3gYQhAkue9gaQy/venue-4_845f447e.jpg" },
+  { id: 5, title: "Grand Hall View", category: "Venue", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/TcM4jjBH3gYQhAkue9gaQy/venue-5_d303253c.jpg" },
 ];
 
 export default function Gallery() {
@@ -81,13 +77,15 @@ export default function Gallery() {
                 style={{ animationDelay: `${idx * 0.05}s` }}
                 onClick={() => setSelectedImage(image.id)}
               >
-                <div className="relative h-64 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden border-2 border-border group-hover:border-primary transition-all">
-                  <div className="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-                    <div className="text-center">
-                      <div className="text-4xl opacity-50 group-hover:opacity-100 transition-opacity">📷</div>
-                      <p className="text-muted-foreground group-hover:text-foreground transition-colors mt-2 text-sm font-medium">
-                        {image.title}
-                      </p>
+                <div className="relative h-64 rounded-lg overflow-hidden border-2 border-border group-hover:border-primary transition-all">
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                    <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <p className="text-white font-semibold text-sm">{image.title}</p>
                     </div>
                   </div>
                   <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">

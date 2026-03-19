@@ -134,6 +134,37 @@ export default function TheVenue() {
         </div>
       </section>
 
+      {/* Venue Tour Videos */}
+      <section className="section-padding bg-background">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-center mb-12">Virtual Venue Tours</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/4uh1QBIzp0A"
+                title="Boulevard Banquet Hall - Venue Tour 1"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/2NohrcbWbQk"
+                title="Boulevard Banquet Hall - Venue Tour 2"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why BYOB */}
       <section className="section-padding bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="container">
