@@ -55,3 +55,8 @@
 - [x] Implement royal-style UI design with elegant cards and sections
 - [x] Improve overall page layout and visual hierarchy
 - [x] Add consistent spacing and typography across all pages
+
+## Deployment Tasks
+- [x] Make hero video background more transparent
+- [ ] Push code to GitHub repository
+- [ ] Deploy build to Firebase Hosting
