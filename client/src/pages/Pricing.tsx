@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import { Check, Music, Crown, Wifi, ParkingCircle, Table2, Users } from "lucide-react";
 
 export default function Pricing() {
@@ -44,13 +43,9 @@ export default function Pricing() {
                 </div>
               </div>
 
-              <Link href="/contact">
-                <a>
-                  <Button className="btn-primary w-full">
-                    Book Weekday
-                  </Button>
-                </a>
-              </Link>
+              <a href="/contact" className="btn-primary inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 text-center">
+                Book Weekday
+              </a>
             </div>
 
             {/* Weekend */}
@@ -81,13 +76,9 @@ export default function Pricing() {
                 </div>
               </div>
 
-              <Link href="/contact">
-                <a>
-                  <Button className="btn-primary w-full">
-                    Book Weekend
-                  </Button>
-                </a>
-              </Link>
+              <a href="/contact" className="btn-primary inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 text-center">
+                Book Weekend
+              </a>
             </div>
           </div>
 
@@ -232,13 +223,9 @@ export default function Pricing() {
               ID is required for all bookings.
             </p>
           </div>
-          <Link href="/contact">
-            <a>
-              <Button className="btn-primary">
-                Reserve Your Date
-              </Button>
-            </a>
-          </Link>
+          <a href="/contact" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90">
+            Reserve Your Date
+          </a>
         </div>
       </section>
     </div>

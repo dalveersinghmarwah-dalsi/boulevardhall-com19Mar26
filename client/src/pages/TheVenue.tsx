@@ -123,13 +123,9 @@ export default function TheVenue() {
                     <p className="text-sm text-muted-foreground mb-6">
                       <strong>Features:</strong> Free Wi-Fi, Free Parking, Tables & Chairs Included
                     </p>
-                    <Link href="/contact">
-                      <a>
-                        <Button className="btn-primary w-full">
-                          Book This Location
-                        </Button>
-                      </a>
-                    </Link>
+                    <a href="/contact" className="btn-primary inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 text-center">
+                      Book This Location
+                    </a>
                   </div>
                 </div>
               </div>
@@ -173,13 +169,9 @@ export default function TheVenue() {
                   <span>Significant cost savings</span>
                 </li>
               </ul>
-              <Link href="/contact">
-                <a>
-                  <Button className="btn-primary">
-                    Reserve Your Venue Today
-                  </Button>
-                </a>
-              </Link>
+              <a href="/contact" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90">
+                Reserve Your Venue Today
+              </a>
             </div>
             <div className="h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center border-2 border-primary/30 hidden md:flex">
               <div className="text-center">

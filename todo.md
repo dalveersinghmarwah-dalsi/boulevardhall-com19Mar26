@@ -34,3 +34,4 @@
 
 ## Bug Fixes
 - [x] Fix nested anchor tag error in Navigation component
+- [x] Fix nested anchor tag errors in Home, TheVenue, and Pricing pages

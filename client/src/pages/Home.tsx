@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import { Calendar, Users, Music, Crown, MapPin, Phone } from "lucide-react";
 
 export default function Home() {
@@ -25,18 +24,12 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/contact">
-                  <a>
-                    <Button className="btn-primary w-full sm:w-auto">
-                      Reserve Now
-                    </Button>
-                  </a>
-                </Link>
-                <a href="tel:401-527-0017">
-                  <Button className="btn-secondary w-full sm:w-auto">
-                    <Phone size={18} className="mr-2" />
-                    Call (401) 527-0017
-                  </Button>
+                <a href="/contact" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto text-center">
+                  Reserve Now
+                </a>
+                <a href="tel:401-527-0017" className="btn-secondary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-secondary text-secondary-foreground hover:bg-secondary/90 w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                  <Phone size={18} />
+                  Call (401) 527-0017
                 </a>
               </div>
 
@@ -185,17 +178,11 @@ export default function Home() {
             Contact us today to reserve your date and create unforgettable memories
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <a>
-                <Button className="btn-primary">
-                  Reserve Your Date
-                </Button>
-              </a>
-            </Link>
-            <a href="tel:401-527-0017">
-              <Button className="btn-secondary">
-                Call Now
-              </Button>
+            <a href="/contact" className="btn-primary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-primary text-primary-foreground hover:bg-primary/90">
+              Reserve Your Date
+            </a>
+            <a href="tel:401-527-0017" className="btn-secondary inline-block px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl bg-secondary text-secondary-foreground hover:bg-secondary/90">
+              Call Now
             </a>
           </div>
         </div>
