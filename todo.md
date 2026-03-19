@@ -58,5 +58,5 @@
 
 ## Deployment Tasks
 - [x] Make hero video background more transparent
-- [ ] Push code to GitHub repository
-- [ ] Deploy build to Firebase Hosting
+- [x] Push code to GitHub repository
+- [x] Deploy build to Firebase Hosting
