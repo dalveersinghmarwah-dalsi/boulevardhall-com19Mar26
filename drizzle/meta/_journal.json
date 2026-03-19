@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1773921809276,
+      "tag": "0000_aromatic_talos",
+      "breakpoints": true
+    }
+  ]
 }
