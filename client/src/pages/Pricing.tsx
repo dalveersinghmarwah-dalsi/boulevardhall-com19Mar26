@@ -4,17 +4,18 @@ import { Check, Music, Crown, Wifi, ParkingCircle, Table2, Users } from "lucide-
 export default function Pricing() {
   return (
     <div className="min-h-screen">
-      {/* Royal Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.15)" }}>
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "#d79696" }}></div>
-        </div>
+      {/* Royal Hero Section with Background Image */}
+      <section className="relative py-24 md:py-32 overflow-hidden min-h-96" style={{
+        backgroundImage: `url('https://nebula.wsimg.com/cf0a163a96908cab699fd1d1980b9094?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 opacity-70" style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}></div>
         
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6" style={{ color: "#d79696" }}>Transparent Pricing</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg" style={{ color: "#d79696" }}>Transparent Pricing</h1>
+            <p className="text-xl text-white leading-relaxed drop-shadow-lg">
               Competitive rates with no hidden fees. Choose the package that works best for your event.
             </p>
           </div>
