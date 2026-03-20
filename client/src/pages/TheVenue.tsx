@@ -6,18 +6,21 @@ const locations = [
     address: "510 Armistice Boulevard",
     city: "Pawtucket, RI 02861",
     phone: "(401) 527-0017",
+    image: "https://nebula.wsimg.com/0acf053a927e6e173f2b4c91be8fb7d9?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1"
   },
   {
     name: "Central Avenue",
     address: "520 Central Avenue",
     city: "Pawtucket, RI 02861",
     phone: "(401) 527-0017",
+    image: "https://nebula.wsimg.com/cf0a163a96908cab699fd1d1980b9094?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1"
   },
   {
     name: "Main Street",
     address: "222 Main Street",
     city: "Pawtucket, RI 02860",
     phone: "(401) 527-0017",
+    image: "https://nebula.wsimg.com/b780ea7def9b1f5d471ef8c9006c0786?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1"
   }
 ];
 
@@ -114,13 +117,15 @@ export default function TheVenue() {
                 className="rounded-2xl overflow-hidden bg-background border-2 transition-all duration-300 hover:shadow-2xl"
                 style={{ borderColor: "rgba(215, 150, 150, 0.3)" }}
               >
-                {/* Location Image Placeholder */}
-                <div className="h-56 relative overflow-hidden" style={{ backgroundColor: "rgba(215, 150, 150, 0.1)" }}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin size={64} style={{ color: "#d79696" }} className="mx-auto mb-3 opacity-50" />
-                      <p className="text-muted-foreground font-semibold">{location.name}</p>
-                    </div>
+                {/* Location Image */}
+                <div className="h-56 relative overflow-hidden">
+                  <img 
+                    src={location.image} 
+                    alt={location.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold shadow-sm" style={{ color: "#d79696" }}>
+                    Available
                   </div>
                 </div>
 
@@ -153,7 +158,7 @@ export default function TheVenue() {
                     <p className="text-sm text-muted-foreground mb-6">
                       <strong>Capacity:</strong> Up to 110 guests
                     </p>
-                    <a href="/contact" className="w-full py-3 rounded-lg font-semibold transition-all duration-300 text-center text-white hover:shadow-lg" style={{ backgroundColor: "#d79696" }}>
+                    <a href="/contact" className="w-full py-3 rounded-lg font-semibold transition-all duration-300 text-center text-white hover:shadow-lg inline-block" style={{ backgroundColor: "#d79696" }}>
                       Book This Location
                     </a>
                   </div>

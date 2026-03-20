@@ -94,18 +94,38 @@ export default function Home() {
 
           {/* Add-ons */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-center gap-4 p-6 bg-muted rounded-lg">
-              <Music size={32} style={{ color: "#d79696" }} className="flex-shrink-0" />
+            <div className="flex items-center gap-6 p-6 bg-muted rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/itnMwYalNnGymKZf.png" 
+                  alt="DJ Speaker" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div>
-                <h4 className="font-semibold">DJ Speaker Rental</h4>
-                <p className="text-sm text-muted-foreground">$79 with free delivery</p>
+                <div className="flex items-center gap-2 mb-1">
+                  <Music size={20} style={{ color: "#d79696" }} />
+                  <h4 className="font-bold text-xl">DJ Speaker Rental</h4>
+                </div>
+                <p className="text-muted-foreground">$79 with free delivery</p>
+                <p className="text-xs text-muted-foreground mt-2 italic">Powerful sound for your playlist</p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-6 bg-muted rounded-lg">
-              <Crown size={32} style={{ color: "#d79696" }} className="flex-shrink-0" />
+            <div className="flex items-center gap-6 p-6 bg-muted rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/PlamGFaIdIQglATV.jpg" 
+                  alt="Throne Chair" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div>
-                <h4 className="font-semibold">Throne Chair Rental</h4>
-                <p className="text-sm text-muted-foreground">$129 with free delivery</p>
+                <div className="flex items-center gap-2 mb-1">
+                  <Crown size={20} style={{ color: "#d79696" }} />
+                  <h4 className="font-bold text-xl">Throne Chair Rental</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">We have 2 different colors of the big 6ft Chairs Rentals.</p>
+                <p className="text-sm font-bold mt-1" style={{ color: "#d79696" }}>Special $129 with Free Delivery no security deposit</p>
               </div>
             </div>
           </div>

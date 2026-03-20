@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const galleryImages = [
   { id: 1, title: "Elegant Venue Entrance", category: "Venue", image: "https://nebula.wsimg.com/0acf053a927e6e173f2b4c91be8fb7d9?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
@@ -10,7 +9,19 @@ const galleryImages = [
   { id: 5, title: "Premium Venue Setup", category: "Setup", image: "https://nebula.wsimg.com/2dc8676e04cc7709aa26e26124afef26?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
   { id: 6, title: "Decorated Event Space", category: "Decoration", image: "https://nebula.wsimg.com/57af97f425f4a6b20cb0c5ac664d1217?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
   { id: 7, title: "Intimate Celebration", category: "Event", image: "https://nebula.wsimg.com/222fbd0859a1760d85a0dbc9301527f8?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
-  { id: 8, title: "Full Venue View", category: "Venue", image: "https://nebula.wsimg.com/e1e3e8c4c2f1e8e4c2f1e8e4c2f1e8e4?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 8, title: "Full Venue View", category: "Venue", image: "https://nebula.wsimg.com/210143e745800d1fab9b96605c8f33c4?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 9, title: "Elegant Interior", category: "Venue", image: "https://nebula.wsimg.com/d875bac63cc02443dee53c8e352f3b32?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 10, title: "Table Arrangement", category: "Setup", image: "https://nebula.wsimg.com/892b26f588b92fc168f03f84d787d43e?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 11, title: "Event Decoration", category: "Decoration", image: "https://nebula.wsimg.com/678dbe04d7eb486b8ddc73ba9517dbd5?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 12, title: "Venue Exterior", category: "Venue", image: "https://nebula.wsimg.com/b780ea7def9b1f5d471ef8c9006c0786?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 13, title: "Spacious Hall", category: "Venue", image: "https://nebula.wsimg.com/23153f434fa70f509b40d1d5d7bd8fe7?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 14, title: "Celebration Setup", category: "Event", image: "https://nebula.wsimg.com/39dbf0962f956e459f7bb4ecc37714ee?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 15, title: "Modern Lighting", category: "Decoration", image: "https://nebula.wsimg.com/53252e4abf519e162d89d415ed5abc91?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 16, title: "Venue View 2", category: "Venue", image: "https://nebula.wsimg.com/213a7cb88383ed21d5ab77a84fc46b32?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 17, title: "Table Detail", category: "Setup", image: "https://nebula.wsimg.com/1253b8e0c97b0c2fc0f5961e71ded943?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 18, title: "Event Space", category: "Event", image: "https://nebula.wsimg.com/0379f8080bf615ef40955074515e7e18?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 19, title: "Decorated Hall", category: "Decoration", image: "https://nebula.wsimg.com/93f05de6a075966947767f45e7b2d8a1?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
+  { id: 20, title: "Venue Interior 3", category: "Venue", image: "https://nebula.wsimg.com/7cdf443a5041de0b046907ab25b26b12?AccessKeyId=F08E3691FA4C6D5F2578&disposition=0&alloworigin=1" },
 ];
 
 export default function Gallery() {
@@ -88,7 +99,7 @@ export default function Gallery() {
               <div
                 key={image.id}
                 onClick={() => setSelectedImage(image.id)}
-                className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square"
+                className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <img
                   src={image.image}
@@ -121,7 +132,7 @@ export default function Gallery() {
               <img
                 src={galleryImages.find(img => img.id === selectedImage)?.image}
                 alt="Lightbox"
-                className="w-full h-auto max-h-96 object-contain"
+                className="w-full h-auto max-h-[80vh] object-contain"
               />
 
               <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 hover:opacity-100 transition-opacity">
